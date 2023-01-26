@@ -18,18 +18,22 @@ public class WelcomeScreen {
 	}
 	
 	public static void InterfaceMenu() {
+		System.out.println("#######################################");
 		System.out.println("Please select one of the below options:");
+		System.out.println("#######################################");
 		System.out.println("1.Return the current files in root directory");
 		System.out.println("2.Display user interface options");
 		System.out.println("3.Exit\n");
 	}
 	
 	public static void InterfaceMenuOptions() {
+		System.out.println("#######################################");
 		System.out.println("Please select one of the below options:");
+		System.out.println("#######################################");
 		System.out.println("1.Add file");
 		System.out.println("2.Delete a file");
 		System.out.println("3.Search a file");
-		System.out.println("3.Return to previous menu");
-		System.out.println("3.Exit");
+		System.out.println("4.Return to previous menu");
+		System.out.println("5.Exit\n");
 	}
 }
