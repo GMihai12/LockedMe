@@ -120,7 +120,8 @@ public class FileOptions {
 					System.out.println("Please select a valid option.");
 				}
 				} catch (InputMismatchException e) {
-					System.out.println(e.toString()+"\n\n");
+					System.out.println(e.toString());
+					System.out.println("Please make sure to select a valid option.\n\n");
 					sc.next();
 			}
 		}
