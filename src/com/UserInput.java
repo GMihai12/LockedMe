@@ -29,7 +29,7 @@ public class UserInput {
 					sc.close();
 					System.exit(0);
 				default:
-					System.out.println("Please select a valid option.");
+					System.out.println("Please make sure to select a valid option.\n");
 				}
 				} catch (InputMismatchException e) {
 					System.out.println(e.toString()+"\n\n");

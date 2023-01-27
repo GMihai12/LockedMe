@@ -19,7 +19,7 @@ public class WelcomeScreen {
 	
 	public static void InterfaceMenu() {
 		System.out.println("#######################################");
-		System.out.println("Please select one of the below options:");
+		System.out.println("Please select one of the below options#");
 		System.out.println("#######################################");
 		System.out.println("1.Return the current files in root directory");
 		System.out.println("2.Display user interface options");
@@ -28,7 +28,7 @@ public class WelcomeScreen {
 	
 	public static void InterfaceMenuOptions() {
 		System.out.println("#######################################");
-		System.out.println("Please select one of the below options:");
+		System.out.println("Please select one of the below options#");
 		System.out.println("#######################################");
 		System.out.println("1.Add file");
 		System.out.println("2.Delete a file");

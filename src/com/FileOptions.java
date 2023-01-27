@@ -51,21 +51,29 @@ public class FileOptions {
 				WelcomeScreen.InterfaceMenuOptions();
 				int input = sc.nextInt();
 				switch(input) {
+				//Add a file
 				case 1:
+					try {
 					System.out.println("Please provide the name of the file you wish to add");
 					String fileName = sc.next();
 					String filePath = "./root/"+fileName;
-					File ff = new File(fileName);
+					File ff = new File(filePath);
 					if(ff.exists()) {
-						System.out.println("File already present");
+						System.out.println("File already present\n");
 					}else {
 							//ff.createNewFile();
 						FileWriter fw = new FileWriter(filePath);
-						fw.write("Welcome user your create file with name as "+fileName);
+						//fw.write("Welcome user your create file with name as "+fileName);
 						fw.flush();
-						System.out.println("File created...");
+						System.out.println("File created...\n");
 					}
+					
+					} catch (IOException e) {
+						System.out.println(e.toString()+"\n\n");
+						//sc.next();
+						}
 					break;
+				//Delete a specific file
 				case 2:
 					System.out.println("Please provide the name of the file you wish to delete");
 					String fileToDelete= sc.next();
@@ -78,11 +86,12 @@ public class FileOptions {
 						System.out.println(ftd.getName()+" was successfully deleted");
 					}
 					else {
-						System.out.println("Failed to delete "+ftd.getName());
+						System.out.println("Failed to delete "+ftd.getName()+". File not found.");
 						//FileOptions.findFile(ftd.getName());
 					}
 					
 					break;
+				//Search a specific file
 				case 3:
 					System.out.println("Please provide the name of the file you wish to search for");
 					String fileToSearch= sc.next();
@@ -98,8 +107,10 @@ public class FileOptions {
 					
 					//FileOptions.findFile(fileToSearch);
 					break;
+				//Return to previous menu
 				case 4:
 					return;
+				//Exit application
 				case 5:
 					UserOptionsMenu="Not Running";
 					System.out.println("Application exited");
